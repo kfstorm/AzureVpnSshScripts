@@ -21,12 +21,12 @@ if ((Test-Path $installerPath) -eq $false)
 if ($sshSettingPath -eq $null)
 {
     Write-Host "Installing Bitvise SSH Server with default settings"
-    & $installerPath -defaultInstance -acceptEULA -activationCode="$activationCode"
+    & $installerPath -defaultInstance -acceptEULA -activationCode="$activationCode" -startService -startBssCtrl
 }
 else
 {
     Write-Host "Installing Bitvise SSH Server with settings file" $sshSettingPath
-    & $installerPath -defaultInstance -acceptEULA -settings="$sshSettingPath" -activationCode="$activationCode"
+    & $installerPath -defaultInstance -acceptEULA -settings="$sshSettingPath" -activationCode="$activationCode" -startService -startBssCtrl
 }
 
 if (($LastExitCode -band 16) -gt 0)
