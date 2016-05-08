@@ -16,7 +16,6 @@ $installerPath = "$PSScriptRoot\$installerFileName"
 if ((Test-Path $installerPath) -eq $false)
 {
     Start-BitsTransfer -Source $installerSourceUrl -Destination $installerPath -Description "Downloading Bitvise SSH Server installer"
-    $needsRestart = $ture
 }
 
 if ($sshSettingPath -eq $null)
@@ -30,7 +29,7 @@ else
     & $installerPath -defaultInstance -acceptEULA -settings="$sshSettingPath" -activationCode="$activationCode"
 }
 
-if ($needsRestart)
+if (($LastExitCode -band 16) -gt 0)
 {
     Write-Host "Restarting computer"
     Restart-Computer

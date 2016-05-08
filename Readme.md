@@ -1,8 +1,8 @@
 # Azure VPN/SSH scripts
 
-This project contains scripts to enable VPN and/or SSH with command line. You don't need to re-configure VPN or SSH again and again when you want to recreate a VM or the network adapter changed.
+This project contains scripts to enable VPN and/or SSH on Azure VM with command line. You don't need to re-configure VPN or SSH again and again when you want to recreate a VM or the network adapter changed.
 
-## What we can do
+## What it can do
   - Create a new Azure VM with nessesary NSG rules with command line
   - Set up VPN on Windows Server
   - Set up SSH server
