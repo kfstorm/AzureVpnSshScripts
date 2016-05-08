@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": null // "eastasia"
+        },
+        "virtualMachine_adminUsername": {
+            "value": null // your username here
+        },
+        "virtualMachine_adminPassword": {
+            "value": null // your password here
+        },
+        "virtualMachine_name": {
+            "value": null // your vm name here
+        },
+        "virtualMachine_size": {
+            "value": null // "Standard_D1_v2"
+        },
+        "networkInterface_name": {
+            "value": null // your NIC name here
+        },
+        "networkSecurityGroup_name": {
+            "value": null // your NSG name here
+        },
+        "publicIPAddress_name": {
+            "value": null // your public IP address name here
+        },
+        "virtualNetwork_name": {
+            "value": null // your VNET name here
+        },
+        "storageAccount_name": {
+            "value": null // your storage account name here
+        }
+    }
+}
